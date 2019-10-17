@@ -1,12 +1,11 @@
 import React from 'react';
-import './Scroll.css';
 
 const Scroll = (props) => {
-    return (
-        <div id={"scrollBar"}>
-            {props.children}
-        </div>
-    )
+  return (
+    <div style={{ overflow: 'scroll', border: '5px solid black', height: '800px'}}>
+      {props.children}
+    </div>
+  );
 };
 
 export default Scroll;
