@@ -1,5 +1,4 @@
-# robofriends
-Tutorial for udemy course - React + Redux
+# roboFriends
 
 To run the project:
 
