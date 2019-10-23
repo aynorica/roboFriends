@@ -16,16 +16,16 @@ const mapStateToProps = (state) => {
     robots: state.requestRobots.robots,
     isPending: state.requestRobots.isPending
   }
-}
+};
 
 // dispatch the DOM changes to call an action. note mapStateToProps returns object, mapDispatchToProps returns function
-// the function returns an object then uses connect to change the data from redecers.
+// the function returns an object then uses connect to change the data from reducers.
 const mapDispatchToProps = (dispatch) => {
   return {
     onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
     onRequestRobots: () => dispatch(requestRobots())
   }
-}
+};
 
 class App extends Component {
   componentDidMount() {
@@ -36,7 +36,7 @@ class App extends Component {
     const { robots, searchField, onSearchChange, isPending } = this.props;
     const filteredRobots = robots.filter(robot => {
       return robot.name.toLowerCase().includes(searchField.toLowerCase());
-    })
+    });
     return (
       <div className='tc'>
         <h1 className='f1'>RoboFriends</h1>
