@@ -7,7 +7,7 @@ import { searchRobots, requestRobots } from './reducers';
 import thunkMiddleware from 'redux-thunk';
 import './index.css';
 import App from './containers/App';
-import registerServiceWorker from './registerServiceWorker';
+import * as serviceWorker from './serviceWorker';
 import 'tachyons';
 
 const logger = createLogger();
@@ -19,4 +19,4 @@ ReactDOM.render(
         <App />
     </Provider>
 , document.getElementById('root'));
-registerServiceWorker();
+serviceWorker.register();
